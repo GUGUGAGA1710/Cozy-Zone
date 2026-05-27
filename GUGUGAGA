@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Home</title>
+    <style>
+        /* Green and brown colors, like a cozy forest */
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --accent-color: #16a085;
+            --text-main: #2c3e50;
+            --text-muted: #7f8c8d;
+            --code-bg: #2c3e50;
+            --code-text: #ecf0f1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            font-size: 18px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Sección Cartas: Grid en PC, Lista vertical en Móvil */
+        .letters-grid {
+            display: block;
+        }
+        
+        .letter-card {
+            background: #fdfbf7;
+            border: 1px solid #e2e1dd;
+            border-left: 4px solid #f1c40f;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .letter-card h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .letter-card p {
+            font-size: 13px;
+            text-align: justify;
+        }
+
+        .letter-meta {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            text-align: right;
+        }
+
+        /* https://youtube.com/playlist?list=PLzYWFT8BLqMXjiGVoHFEWdq_-960r4nq1&si=-sRVj2TvHZJmxoPR */
+        .playlist-container {https://youtube.com/playlist?list=PLzYWFT8BLqMXjiGVoHFEWdq_-960r4nq1&si=-sRVj2TvHZJmxoPR
+            text-align: center;
+        }
+        
+        .playlist-placeholder {
+            background: #e8f8f5;
+            border: 2px dashed var(--accent-color);
+            padding: 20px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: var(--accent-color);
+        }
+
+        /* Sección Galería Inteligente (Layout flexible) */
+        .gallery-grid {
+            display: block;
+        }
+
+        .gallery-item {
+            margin-bottom: 15px;
+            background: #f9fbfb;
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto 8px auto;
+        }
+
+        .gallery-item p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Footer con código (Easter Egg para él) */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 0 15px;
+        }
+
+        .code-box {
+            font-family: "Courier New", Courier, monospace;
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 12px;
+            text-align: left;
+            max-width: 450px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        /* Consultas de Medios (Media Queries) para pantallas grandes (PC) */
+        @media (min-width: 600px) {
+            .letters-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            .letter-card {
+                margin-bottom: 0;
+            }
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            .gallery-item {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cozy Home</h1>
+        <p>I don`t mind the distance, as long we are together<3 </p>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECCIÓN 1: CHEER UP LETTERS -->
+        <section id="Letters">
+            <h2>
+Mailbox of Encouragement</h2>
+            <div class="letters-grid">
+                
+                <!-- LETTER 1 -->
+                <div class="letter-card">
+                    <h3>My Dear Dave: For the most tender programmer</h3>
+                    <p>It may be a hard day, i know you did your best: even if goes wrong or good. Please remember to not forget to rest, you deserve to relax despises everthing: with a lot of love, Lucinda ❤️</p>
+                    <div class="letter-meta">Cheer up note #1</div>
+                </div>
+
+                <!-- LETTER 2 -->
+                <div class="letter-card" style="border-left-color: #16a085;">
+                    <h3>From Dave: For Lucinda</h3>
+                    <p>(your text)</p>
+                    <div class="letter-meta">Cheer up note #2</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PLAYLIST -->
+        <section id="music">
+            <h2>Relaxing</h2>
+            <div class="playlist-container">
+                <!-- YOUTUBE: 
+                <iframe style="border-radius:12px" src="https://youtube.com/playlist?list=PLzYWFT8BLqMXjiGVoHFEWdq_-960r4nq1&si=-sRVj2TvHZJmxoPR" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
